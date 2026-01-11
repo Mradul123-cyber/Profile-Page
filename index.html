@@ -21,13 +21,14 @@
         <div class="nav-links">
             <a href="#home" class="nav-link">Home</a>
             <a href="#journey" class="nav-link">Journey</a>
+            <a href="#tech-stack" class="nav-link">Tech Stack</a>
             <a href="#projects" class="nav-link">Projects</a>
             <a href="#contact" class="nav-link">Contact</a>
         </div>
     </nav>
 
-    <!-- Theme Toggle Button -->
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
         <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="5"></circle>
@@ -46,6 +47,7 @@
         </svg>
     </button>
 
+
     <!-- Main Container -->
     <div class="container">
         <!-- Hero Section -->
@@ -61,7 +63,8 @@
                 <span class="tag">🇮🇳 India</span>
                 <span class="tag">💻 5 years of coding</span>
             </div>
-            <p class="tagline">Building digital experiences from scratch since age 11</p>
+            <p class="tagline">I’m a software developer with hands-on experience building real-world applications,
+                including secure messaging systems, AI-powered chatbots, and backend services</p>
         </header>
 
         <!-- Journey Section -->
@@ -181,6 +184,52 @@
             </div>
         </section>
 
+        <!-- Tech Stack Section -->
+        <section class="tech-stack-section" id="tech-stack">
+            <h2 class="section-title">
+                <span class="title-icon">🛠️</span>
+                Tech Stack
+            </h2>
+
+            <div class="tech-stack-grid">
+                <div class="tech-category">
+                    <h3 class="tech-category-title"><span class="tech-icon">📱</span> Frontend</h3>
+                    <ul class="tech-list">
+                        <li class="tech-item">Flutter</li>
+                        <li class="tech-item">HTML, CSS, JavaScript</li>
+                        <li class="tech-item">Responsive Design</li>
+                    </ul>
+                </div>
+
+                <div class="tech-category">
+                    <h3 class="tech-category-title"><span class="tech-icon">⚙️</span> Backend</h3>
+                    <ul class="tech-list">
+                        <li class="tech-item">Go (Golang)</li>
+                        <li class="tech-item">Firebase</li>
+                        <li class="tech-item">PostgreSQL</li>
+                    </ul>
+                </div>
+
+                <div class="tech-category">
+                    <h3 class="tech-category-title"><span class="tech-icon">🔐</span> Security</h3>
+                    <ul class="tech-list">
+                        <li class="tech-item">End-to-End Encryption (E2EE)</li>
+                        <li class="tech-item">Signal Protocol</li>
+                        <li class="tech-item">Key Management</li>
+                    </ul>
+                </div>
+
+                <div class="tech-category">
+                    <h3 class="tech-category-title"><span class="tech-icon">🛠️</span> Tools & Platforms</h3>
+                    <ul class="tech-list">
+                        <li class="tech-item">Git & GitHub</li>
+                        <li class="tech-item">Android Studio</li>
+                        <li class="tech-item">Google Cloud</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <!-- Projects Section -->
         <section class="projects-section" id="projects">
             <h2 class="section-title">
@@ -195,8 +244,9 @@
                         <h3>ZARQ</h3>
                         <span class="project-type">Web App</span>
                     </div>
-                    <p class="project-description">A modern web application built with HTML, CSS, and JavaScript
-                        showcasing clean design and smooth interactions.</p>
+                    <p class="project-description">Modern responsive web application showcasing clean UI/UX principles
+                        and smooth animations. Built to demonstrate professional frontend development skills with
+                        vanilla JavaScript.</p>
                     <div class="project-tech">
                         <span class="tech-badge">HTML</span>
                         <span class="tech-badge">CSS</span>
@@ -220,8 +270,9 @@
                         <h3>SamvidhanAI</h3>
                         <span class="project-type">AI Chatbot</span>
                     </div>
-                    <p class="project-description">Indian Constitution AI Chatbot powered by Gemini 3 API. Interactive
-                        interface to learn about constitutional laws and articles.</p>
+                    <p class="project-description">AI-powered chatbot that makes Indian Constitution accessible to
+                        everyone. Helps users understand constitutional laws, articles, and rights through natural
+                        language conversations powered by Gemini 3 API.</p>
                     <div class="project-tech">
                         <span class="tech-badge">HTML</span>
                         <span class="tech-badge">CSS</span>
@@ -246,8 +297,10 @@
                         <h3>ZARQ Messenger</h3>
                         <span class="project-type">Mobile App</span>
                     </div>
-                    <p class="project-description">Secure messaging app with Signal Protocol for true E2EE. Features
-                        AI-powered message enhancement, translation, and summarization using Gemini 2.5 Flash.</p>
+                    <p class="project-description">Secure end-to-end encrypted messaging app supporting 1-1 and group
+                        chats. Built with Flutter frontend, Go backend, and PostgreSQL database. Features custom E2EE
+                        implementation using Signal Protocol, plus AI-enhanced messaging capabilities for translation
+                        and summarization. Successfully published on Google Play Store.</p>
                     <div class="project-tech">
                         <span class="tech-badge">Flutter</span>
                         <span class="tech-badge">Golang</span>
@@ -269,11 +322,12 @@
                 <!-- Digikarar -->
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>digikarar</h3>
+                        <h3>Digikarar</h3>
                         <span class="project-type">Mobile App</span>
                     </div>
-                    <p class="project-description">Digital solution built with Flutter and Firebase for streamlined
-                        operations and enhanced user experience.</p>
+                    <p class="project-description">Digital transformation platform for service providers. Built with
+                        Flutter and Firebase to streamline business operations and enhance client interactions with
+                        real-time updates and cloud synchronization.</p>
                     <div class="project-tech">
                         <span class="tech-badge">Flutter</span>
                         <span class="tech-badge">Firebase</span>
@@ -289,8 +343,9 @@
                         <h3>RailServe</h3>
                         <span class="project-type">Mobile App</span>
                     </div>
-                    <p class="project-description">Railway service management application developed with Flutter,
-                        focusing on efficient service delivery.</p>
+                    <p class="project-description">Railway service management system designed to improve passenger
+                        experience and operational efficiency. Flutter-based mobile solution for ordering services and
+                        tracking deliveries on trains.</p>
                     <div class="project-tech">
                         <span class="tech-badge">Flutter</span>
                     </div>
@@ -367,8 +422,19 @@
 
         <!-- Footer -->
         <footer class="footer">
-            <p>Built with passion and vanilla HTML, CSS & JavaScript</p>
-            <p class="footer-note">Always learning, always building 🚀</p>
+            <div class="footer-content">
+                <p class="footer-copyright">© 2026 Mradul • Built with HTML, CSS & JavaScript</p>
+                <div class="footer-links">
+                    <a href="https://github.com/Mradul123-cyber" class="footer-link" target="_blank"
+                        rel="noopener noreferrer">GitHub</a>
+                    <span class="footer-separator">•</span>
+                    <a href="https://www.linkedin.com/in/mradul-agrawal-a63364329" class="footer-link" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a>
+                    <span class="footer-separator">•</span>
+                    <a href="mailto:mradulagrawal48125@gmail.com" class="footer-link">Email</a>
+                </div>
+                <p class="footer-tagline">Always learning, always building 🚀</p>
+            </div>
         </footer>
     </div>
 
