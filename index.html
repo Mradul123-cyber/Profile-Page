@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Mradul's Profile - A 16-year-old developer from India with 5 years of coding experience">
+    <title>Mradul - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-brand">Know About Me</div>
+        <div class="nav-links">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#journey" class="nav-link">Journey</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="hero" id="home">
+            <div class="avatar-container">
+                <div class="avatar">
+                    <span class="avatar-text">M</span>
+                </div>
+            </div>
+            <h1 class="name">Mradul</h1>
+            <div class="info-tags">
+                <span class="tag">🎂 16 years old</span>
+                <span class="tag">🇮🇳 India</span>
+                <span class="tag">💻 5 years of coding</span>
+            </div>
+            <p class="tagline">Building digital experiences from scratch since age 11</p>
+        </header>
+
+        <!-- Journey Section -->
+        <section class="journey-section" id="journey">
+            <h2 class="section-title">
+                <span class="title-icon">🚀</span>
+                My Coding Journey
+            </h2>
+
+            <div class="timeline">
+                <!-- Phase 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>The Beginning</h3>
+                            <span class="timeline-tech">HTML • CSS • JavaScript</span>
+                        </div>
+                        <p>Started my coding journey with Scratch in WhiteHat Jr. Built numerous websites as projects,
+                            mastering the fundamentals of web development with HTML, CSS, and JavaScript. Was about to
+                            venture into Python when the company closed down.</p>
+                    </div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Self-Driven Learning</h3>
+                            <span class="timeline-tech">Java • XML</span>
+                        </div>
+                        <p>When WhiteHat Jr closed, AI and YouTube became my mentors. Continued my journey
+                            independently, diving into Android development. Built a Password Manager app using Java and
+                            XML in Android Studio.</p>
+                    </div>
+                </div>
+
+                <!-- Phase 3 - Password Manager -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Password Manager - First Major Lesson in UI/UX</h3>
+                            <span class="timeline-tech">Java • XML • Firebase</span>
+                        </div>
+                        <p>Built my first major Android app - a Password Manager using Java, XML, and Firebase for
+                            storage. While the app worked functionally, it had poor UI/UX design and wasn't responsive.
+                            This project taught me a crucial lesson: an app's success isn't just about functionality,
+                            but equally about user experience and design. The app was a technical failure in terms of
+                            aesthetics, but this failure became a foundation for future success - I learned to
+                            prioritize both beautiful, responsive design AND functionality in all my subsequent
+                            projects, especially ZARQ Messenger.</p>
+                    </div>
+                </div>
+
+                <!-- Phase 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Flutter Era</h3>
+                            <span class="timeline-tech">Flutter • Firebase • PostgreSQL • Golang</span>
+                        </div>
+                        <p>Embraced Flutter for cross-platform development. Started with small projects using Firebase,
+                            then scaled up to building professional applications with PostgreSQL databases and custom
+                            Golang backends for enhanced performance and scalability.</p>
+                    </div>
+                </div>
+
+                <!-- Phase 5 - ZARQ Messenger -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>ZARQ Messenger - The Professional Journey</h3>
+                            <span class="timeline-tech">Flutter • Golang • PostgreSQL • Kotlin</span>
+                        </div>
+                        <p>Developed a professional-grade messenger app implementing the Signal Protocol for true
+                            end-to-end encryption. Integrated advanced features including AI-powered message
+                            enhancement, translation, and summarization using Gemini 2.5 Flash API. Successfully
+                            launched on Google Play Store, gaining real-world experience in app deployment, user
+                            authentication, real-time messaging, and backend architecture. The journey taught valuable
+                            lessons about server management, scaling challenges, and the importance of marketing and
+                            external support - the server eventually shut down, but the learning experience was
+                            invaluable for future projects.</p>
+                    </div>
+                </div>
+
+                <!-- Phase 6 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Recent Projects</h3>
+                            <span class="timeline-tech">Flutter • Firebase</span>
+                        </div>
+                        <p>Continued building practical applications with "digikarar" and "RailServe" using Flutter.
+                            Applied lessons learned from previous projects to create more streamlined and user-focused
+                            solutions.</p>
+                    </div>
+                </div>
+
+                <!-- Phase 7 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Current Focus</h3>
+                            <span class="timeline-tech">JEE Preparation</span>
+                        </div>
+                        <p>Currently preparing for JEE exam to enhance my abilities in reasoning, logical evolution, and
+                            thinking from different perspectives. Continuing to code and build projects alongside exam
+                            preparation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects-section" id="projects">
+            <h2 class="section-title">
+                <span class="title-icon">✨</span>
+                Featured Projects
+            </h2>
+
+            <div class="projects-grid">
+                <!-- ZARQ -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>ZARQ</h3>
+                        <span class="project-type">Web App</span>
+                    </div>
+                    <p class="project-description">A modern web application built with HTML, CSS, and JavaScript
+                        showcasing clean design and smooth interactions.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">HTML</span>
+                        <span class="tech-badge">CSS</span>
+                        <span class="tech-badge">JavaScript</span>
+                    </div>
+                    <a href="https://mradul123-cyber.github.io/ZARQ/" target="_blank" class="project-link">
+                        View Project
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- SamvidhanAI -->
+                <div class="project-card featured">
+                    <div class="featured-badge">AI Powered</div>
+                    <div class="project-header">
+                        <h3>SamvidhanAI</h3>
+                        <span class="project-type">AI Chatbot</span>
+                    </div>
+                    <p class="project-description">Indian Constitution AI Chatbot powered by Gemini 3 API. Interactive
+                        interface to learn about constitutional laws and articles.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">HTML</span>
+                        <span class="tech-badge">CSS</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">Gemini API</span>
+                    </div>
+                    <a href="https://mradul123-cyber.github.io/SamvidhanAI/" target="_blank" class="project-link">
+                        View Project
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Messenger App -->
+                <div class="project-card featured">
+                    <div class="featured-badge">Play Store</div>
+                    <div class="project-header">
+                        <h3>ZARQ Messenger</h3>
+                        <span class="project-type">Mobile App</span>
+                    </div>
+                    <p class="project-description">Secure messaging app with Signal Protocol for true E2EE. Features
+                        AI-powered message enhancement, translation, and summarization using Gemini 2.5 Flash.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Flutter</span>
+                        <span class="tech-badge">Golang</span>
+                        <span class="tech-badge">Kotlin</span>
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.zarq.messenger" target="_blank"
+                        class="project-link">
+                        View on Play Store
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
+                    <p class="project-note">⚠️ Server currently shutdown</p>
+                </div>
+
+                <!-- Digikarar -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>digikarar</h3>
+                        <span class="project-type">Mobile App</span>
+                    </div>
+                    <p class="project-description">Digital solution built with Flutter and Firebase for streamlined
+                        operations and enhanced user experience.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Flutter</span>
+                        <span class="tech-badge">Firebase</span>
+                    </div>
+                    <div class="project-link disabled">
+                        APK Coming Soon
+                    </div>
+                </div>
+
+                <!-- RailServe -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>RailServe</h3>
+                        <span class="project-type">Mobile App</span>
+                    </div>
+                    <p class="project-description">Railway service management application developed with Flutter,
+                        focusing on efficient service delivery.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Flutter</span>
+                    </div>
+                    <div class="project-link disabled">
+                        APK Coming Soon
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <h2 class="section-title">
+                <span class="title-icon">📬</span>
+                Get In Touch
+            </h2>
+
+            <div class="contact-content">
+                <p class="contact-intro">Feel free to reach out for collaborations, questions, or just to say hi!</p>
+
+                <div class="contact-links">
+                    <a href="mailto:mradulagrawal48125@gmail.com" class="contact-card" target="_blank">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Gmail</h3>
+                            <p>mradulagrawal48125@gmail.com</p>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/Mradul123-cyber" class="contact-card" target="_blank">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h3>GitHub</h3>
+                            <p>@Mradul123-cyber</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/mradul-agrawal-a63364329" class="contact-card" target="_blank">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h3>LinkedIn</h3>
+                            <p>Mradul Agrawal</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Built with passion and vanilla HTML, CSS & JavaScript</p>
+            <p class="footer-note">Always learning, always building 🚀</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
