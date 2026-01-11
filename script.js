@@ -420,3 +420,250 @@ if (typeof module !== 'undefined' && module.exports) {
         CardEffects
     };
 }
+// ============================================
+// SCROLL ANIMATION SYSTEM
+// ============================================
+
+class ScrollAnimator {
+    constructor() {
+        this.observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        this.init();
+    }
+
+    init() {
+        // Create Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                    // Optionally unobserve after animation
+                    // observer.unobserve(entry.target);
+                }
+            });
+        }, this.observerOptions);
+
+        // Observe all animatable elements
+        this.observeElements(observer);
+    }
+
+    observeElements(observer) {
+        // Section titles
+        document.querySelectorAll('.section-title').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Tech categories
+        document.querySelectorAll('.tech-category').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Project cards
+        document.querySelectorAll('.project-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Timeline items
+        document.querySelectorAll('.timeline-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Contact cards
+        document.querySelectorAll('.contact-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Contact section
+        const contactSection = document.querySelector('.contact-section');
+        if (contactSection) {
+            observer.observe(contactSection);
+        }
+
+        // Footer
+        const footer = document.querySelector('.footer');
+        if (footer) {
+            observer.observe(footer);
+        }
+
+        // Tagline
+        const tagline = document.querySelector('.tagline');
+        if (tagline) {
+            observer.observe(tagline);
+        }
+
+        // Contact intro
+        const contactIntro = document.querySelector('.contact-intro');
+        if (contactIntro) {
+            observer.observe(contactIntro);
+        }
+    }
+}
+
+// Initialize scroll animator
+document.addEventListener('DOMContentLoaded', () => {
+    new ScrollAnimator();
+});
+// ============================================
+// REDUCE MOTION TOGGLE
+// ============================================
+
+class MotionManager {
+    constructor() {
+        this.motionEnabled = !this.getStoredMotionPreference();
+        this.motionToggleBtn = document.getElementById('motionToggle');
+        this.init();
+    }
+
+    init() {
+        // Set initial motion state
+        this.setMotionState(this.motionEnabled);
+
+        // Add event listener
+        if (this.motionToggleBtn) {
+            this.motionToggleBtn.addEventListener('click', () => this.toggleMotion());
+        }
+
+        // Listen for system preference changes
+        window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {
+            if (!this.getStoredMotionPreference()) {
+                this.setMotionState(!e.matches);
+            }
+        });
+    }
+
+    getStoredMotionPreference() {
+        return localStorage.getItem('reduceMotion') === 'true';
+    }
+
+    setMotionState(enabled) {
+        this.motionEnabled = enabled;
+
+        if (enabled) {
+            document.body.classList.remove('reduce-motion');
+            this.motionToggleBtn?.classList.remove('active');
+        } else {
+            document.body.classList.add('reduce-motion');
+            this.motionToggleBtn?.classList.add('active');
+        }
+
+        localStorage.setItem('reduceMotion', !enabled);
+    }
+
+    toggleMotion() {
+        this.setMotionState(!this.motionEnabled);
+
+        // Add rotation animation
+        this.motionToggleBtn.style.transform = 'rotate(360deg) scale(1.1)';
+        setTimeout(() => {
+            this.motionToggleBtn.style.transform = '';
+        }, 300);
+    }
+}
+
+// ============================================
+// SUBTLE PARALLAX EFFECTS
+// ============================================
+
+class ParallaxManager {
+    constructor() {
+        this.parallaxElements = [];
+        this.init();
+    }
+
+    init() {
+        // Select elements for parallax
+        const sectionTitles = document.querySelectorAll('.section-title');
+        const hero = document.querySelector('.hero');
+
+        this.parallaxElements.push({
+            element: hero,
+            speed: 0.3
+        });
+
+        sectionTitles.forEach(title => {
+            this.parallaxElements.push({
+                element: title,
+                speed: 0.15
+            });
+        });
+
+        // Add scroll listener
+        window.addEventListener('scroll', () => this.handleScroll(), { passive: true });
+    }
+
+    handleScroll() {
+        // Skip if reduce motion is active
+        if (document.body.classList.contains('reduce-motion')) {
+            return;
+        }
+
+        const scrollY = window.scrollY;
+
+        this.parallaxElements.forEach(({ element, speed }) => {
+            if (!element) return;
+
+            const elementTop = element.offsetTop;
+            const elementHeight = element.offsetHeight;
+            const windowHeight = window.innerHeight;
+
+            // Check if element is in viewport
+            if (scrollY + windowHeight > elementTop && scrollY < elementTop + elementHeight) {
+                const distance = scrollY - elementTop;
+                const movement = distance * speed;
+                element.style.transform = `translateY(${movement}px)`;
+            }
+        });
+    }
+}
+
+// ============================================
+// ENHANCED PROJECT CARD INTERACTIONS
+// ============================================
+
+class ProjectCardEnhancer {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        const projectCards = document.querySelectorAll('.project-card');
+
+        projectCards.forEach(card => {
+            card.addEventListener('mouseenter', () => this.onCardHover(card));
+            card.addEventListener('mouseleave', () => this.onCardLeave(card));
+        });
+    }
+
+    onCardHover(card) {
+        const status = card.querySelector('.project-status');
+        if (status) {
+            status.style.transform = 'translateY(-3px) scale(1.05)';
+        }
+
+        const badge = card.querySelector('.featured-badge');
+        if (badge) {
+            badge.style.transform = 'translateY(-3px) scale(1.05)';
+        }
+    }
+
+    onCardLeave(card) {
+        const status = card.querySelector('.project-status');
+        if (status) {
+            status.style.transform = '';
+        }
+
+        const badge = card.querySelector('.featured-badge');
+        if (badge) {
+            badge.style.transform = '';
+        }
+    }
+}
+
+// Initialize on DOM load
+document.addEventListener('DOMContentLoaded', () => {
+    new MotionManager();
+    new ParallaxManager();
+    new ProjectCardEnhancer();
+});
